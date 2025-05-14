@@ -1,37 +1,45 @@
-import React, { useState } from 'react'
-import './Navbar.css'
-import logo from '../Assets/Logo_Small.png'
-import cart_icon from '../Assets/cart_icon.png'
+import React, { useState } from 'react';
+import './Navbar.css';
+import logo from '../Assets/Logo_Small.png';
+import cart_icon from '../Assets/cart_icon.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    const [menu, SetMenu] = useState("Home")
+    const [menu, SetMenu] = useState("home");
+    const [menuOpen, setMenuOpen] = useState(false); // 🔁 Toggle state
+
+    const toggleMenu = () => setMenuOpen(!menuOpen);
+
     return (
         <div className='navbar'>
             <div className='nav-logo'>
-                <img src={logo} alt="AMCA-LOGO" />
+                <Link to="/">
+                    <img src={logo} alt="AMCA-LOGO" />
+                </Link>
             </div>
-            <ul className="nav-menu">
-                <li onClick={() => SetMenu("Home")}>
-                    Home
-                    <hr style={{ width: menu === "Home" ? "80%" : "0%" }} />
-                </li>
-                <li onClick={() => SetMenu("Shop")}>
-                    Shop
-                    <hr style={{ width: menu === "Shop" ? "80%" : "0%" }} />
-                </li>
-                <li onClick={() => SetMenu("About")}>
-                    About
-                    <hr style={{ width: menu === "About" ? "80%" : "0%" }} />
-                </li>
-            </ul>
 
+
+
+            <ul className={`nav-menu ${menuOpen ? "active" : ""}`}>
+                {["home", "shop", "about"].map((item) => (
+                    <li key={item} onClick={() => { SetMenu(item); setMenuOpen(false); }}>
+                        <Link className="nav-link" style={{ textDecoration: 'none' }} to={`/${item === "home" ? "" : item}`}>
+                            {item.charAt(0).toUpperCase() + item.slice(1)}
+                        </Link>
+                        <hr style={{ width: menu === item ? "80%" : "0%" }} />
+                    </li>
+                ))}
+            </ul>
             <div className='nav-login-cart'>
-                <button>Login</button>
-                <img src={cart_icon} alt="Cart-Icon" />
-                <div className='nav-cart-count'> 0 </div>
+                <Link to='/login'><button>Login</button></Link>
+                <Link to='/cart'><img src={cart_icon} alt="Cart" /></Link>
+                <div className='nav-cart-count'>0</div>
+            </div>
+            <div className="hamburger" onClick={toggleMenu}>
+                ☰
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Navbar
+export default Navbar;

@@ -1,0 +1,138 @@
+.hero {
+    height: 55vh;
+    background-color: rgb(14, 14, 14);
+    display: flex;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding-left: 230px;
+    line-height: 1.1;
+
+}
+
+.hero-left h2 {
+    font-size: 48px;
+    margin: 0;
+    transform: translateX(-200px);
+    opacity: 0;
+    animation: slideInLeft 0.8s ease-out forwards;
+    animation-delay: 0.5s;
+}
+
+.hero-left h3 {
+    font-weight: 300;
+    font-size: 22px;
+    transform: translateX(-200px);
+    opacity: 0;
+    margin: 0;
+    padding-bottom: 5px;
+    animation: slideInLeft 0.8s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fade-border-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgb(14, 14, 14);
+}
+
+.fade-border-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle,
+            rgba(0, 0, 0, 0) 10%,
+            rgb(14, 14, 14) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fade-border-container img {
+    display: block;
+    width: 80%;
+    image-rendering: crisp-edges;
+    height: auto;
+    z-index: 1;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        flex-direction: column; 
+        padding: 20px;
+    }
+
+    .hero-left {
+        padding-left: 0;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .hero-left h2 {
+        font-size: 36px; 
+        transform: translateX(0);
+        opacity: 1;
+        animation: none; 
+    }
+
+    .hero-left h3 {
+        font-size: 20px; 
+        transform: translateX(0);
+        opacity: 1;
+        animation: none;
+    }
+
+    .hero-right {
+        flex: 0 0 100%; 
+        margin-top: 20px;
+    }
+
+    .fade-border-container img {
+        width: 100%; 
+        height: auto;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .hero{
+        padding-top: 50px;
+    }
+    .hero-left h2 {
+        font-size: 28px; 
+    }
+
+    .hero-left h3 {
+        font-size: 16px; 
+    }
+}

@@ -12,3 +12,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/*Global Button Styling*/
+.btn-variation-1 {
+  width: 145px;
+  height: 45px;
+  outline: none;
+  border: 0px;
+  border-radius: 75px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #007AFF;
+  cursor: pointer;
+  transition: all 0.3s ease;
+transform: translateX(-200px);
+opacity: 0;
+animation: slideInLeft 0.8s ease-out forwards;
+animation-delay: 0.7s;
+}
+
+.btn-variation-1:hover {
+  border: 1px solid black;
+  background: white;
+  color: #007AFF;
+  transform: translateY(-3px);
+}
+
+.btn-variation-1:active {
+  border: 1px solid #007AFF;
+  background: #007AFF;
+  color: white;
+  transform: translateY(-3px);
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fas.fa-arrow-right {
+    margin-left: 5px;
+}
