@@ -6,9 +6,9 @@ import Offers from '../Components/Offers/Offers'
 const Home = () => {
   return (
     <div>
-      <Hero/>
-      <Popular/>
-      <Offers/>
+      <Hero />
+      <Popular />
+      <Offers />
     </div>
   )
 }
