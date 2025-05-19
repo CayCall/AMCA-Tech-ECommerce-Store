@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'DM Sans';
+  background-color: #FBFBFB;
 }
 
 code {
@@ -26,10 +27,10 @@ code {
   background-color: #007AFF;
   cursor: pointer;
   transition: all 0.3s ease;
-transform: translateX(-200px);
-opacity: 0;
-animation: slideInLeft 0.8s ease-out forwards;
-animation-delay: 0.7s;
+  transform: translateX(-200px);
+  opacity: 0;
+  animation: slideInLeft 0.8s ease-out forwards;
+  animation-delay: 0.7s;
 }
 
 .btn-variation-1:hover {
@@ -41,7 +42,7 @@ animation-delay: 0.7s;
 
 .btn-variation-1:active {
 
-  
+
   border: 1px solid #007AFF;
   background: #007AFF;
   color: white;
@@ -61,5 +62,11 @@ animation-delay: 0.7s;
 }
 
 .fas.fa-arrow-right {
-    margin-left: 5px;
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding-top: 90px; 
+  }
 }

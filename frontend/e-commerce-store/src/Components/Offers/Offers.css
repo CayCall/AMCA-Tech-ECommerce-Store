@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background: linear-gradient(180deg, #2e2e2e 0%, #000000 60%);
+  background: linear-gradient(180deg, #202020 0%, #000000 60%);
   color: white;
   padding: 80px 20px;
   text-align: center;
@@ -44,7 +44,7 @@
 @media (max-width: 768px) {
   .offers {
     height: auto;
-    padding: 40px 20px;
+    padding: 60px 20px;
   }
 
   .offers-left {

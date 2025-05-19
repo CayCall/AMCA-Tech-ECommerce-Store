@@ -2,7 +2,8 @@
     display: flex;
     justify-content: space-around;
     padding: 16px 60px 16px 60px;
-    box-shadow: 0 1px 3px -2px black;
+    box-shadow: 0 1px 3px -2px #202020;
+
 }
 
 .nav-logo {
@@ -32,7 +33,6 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    gap: px;
     cursor: pointer;
     transition: transform 0.3s ease, color 0.3s ease;
     transform: translateY(+3px);
@@ -50,11 +50,11 @@
 
 .nav-link {
     text-decoration: none;
-    color: black;
+    color: #202020;
 }
 
 .nav-link:visited {
-    color: black;
+    color: #202020;
 }
 
 .nav-link:hover {
@@ -95,7 +95,7 @@
 }
 
 .nav-login-cart button:hover {
-    border: 1px solid black;
+    border: 1px solid #202020;
     background: white;
     color: #007AFF;
     transform: translateY(-3px);
@@ -138,15 +138,20 @@
 @media (max-width: 768px) {
     .navbar {
         padding: 16px;
+        position: fixed;
+        background-color: white;
+        z-index: 1000;
     }
 
     .nav-login-cart button {
         display: none;
     }
+
     .nav-login-cart {
-        margin-top :10px;
+        margin-top: 10px;
         padding: 0 0 0 40px;
     }
+
     .nav-menu {
         display: none;
         flex-direction: column;
@@ -154,12 +159,12 @@
         position: absolute;
         top: 60px;
         right: 0;
-        background-color: rgb(14, 14, 14);
+        background-color: #202020;
         opacity: 0.9;
         width: 220px;
         padding-top: 20px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        z-index: 10;
+
     }
 
     .nav-menu li {
