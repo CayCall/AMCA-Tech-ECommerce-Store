@@ -16,9 +16,10 @@ function App() {
   return (
     <div>
       <BrowserRouter>
-        <Navbar />
+        <Navbar/>
+        <Home path='/home'/>
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/about' element={<About />} />
           <Route path='/product' element={<Product />}>
