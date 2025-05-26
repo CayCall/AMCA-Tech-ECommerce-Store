@@ -29,6 +29,7 @@ const Navbar = () => {
                         <hr style={{ width: menu === item ? "80%" : "0%" }} />
                     </li>
                 ))}
+                <Link to='/login' className='hamburger-login-btn'><button>Login</button></Link>
             </ul>
             <div className='nav-login-cart'>
                 <Link to='/login'><button>Login</button></Link>
@@ -38,6 +39,7 @@ const Navbar = () => {
             <div className="hamburger" onClick={toggleMenu}>
                 ☰
             </div>
+            
         </div>
     );
 };
