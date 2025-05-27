@@ -1,0 +1,34 @@
+.hero-left h2{
+    font-size: 60px;
+}
+
+.fade-border-container {
+    position: relative;
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: rgb(14, 14, 14);
+}
+
+.fade-border-container::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: radial-gradient(circle,
+            rgba(0, 0, 0, 0) 45%,
+            rgb(14, 14, 14) 100%);
+    pointer-events: none;
+    z-index: 2;
+}
+
+.fade-border-container img {
+    display: block;
+    width: 80%;
+    image-rendering: crisp-edges;
+    height: auto;
+    z-index: 1;
+    position: relative;
+}
+
+

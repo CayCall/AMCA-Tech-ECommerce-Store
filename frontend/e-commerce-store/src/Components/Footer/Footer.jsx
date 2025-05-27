@@ -3,14 +3,15 @@ import './Footer.css'
 import instagram_icon from '../Assets/instagram.png'
 import Whatsapp_icon from '../Assets/whatsapp.png'
 import LinkedIn_icon from '../Assets/linkedin.png'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
     return (
         <div className='footer'>
             <ul className="footer-links">
-                <li>Home</li>
-                <li>Shop</li>
-                <li>About</li>
+                <li><Link to='/home'>Home</Link></li>
+                <li><Link to='/shop'>Shop</Link></li>
+                <li><Link to='/about'>About</Link></li>
             </ul>
 
             <div className="footer-social-icon">
@@ -28,9 +29,10 @@ const Footer = () => {
             <div className="footer-copyright">
                 <hr />
                 <p>
-                    Copyright &copy; 2025 <a href="https://yourcompany.com" style={{ color: 'inherit', textDecoration: 'none' }}>AMCA</a> | All rights reserved.
-
+                    Copyright &copy; 2025 <a href="https://yourcompany.com" style={{ color: 'inherit', textDecoration: 'none' }}>AMCA | </a>
+                      <span> All rights reserved.</span>
                 </p>
+          
             </div>
         </div>
     )

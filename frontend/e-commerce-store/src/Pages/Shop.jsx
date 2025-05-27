@@ -1,8 +1,11 @@
 import React from 'react'
+import ShopHero from '../Components/ShopHero/ShopHero'
 
 const Shop = () => {
   return (
-   <div>shop page</div>
+    <div>
+      <ShopHero/>
+    </div>
   )
 }
 

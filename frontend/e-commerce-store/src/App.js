@@ -9,7 +9,8 @@ import Checkout from './Pages/Checkout';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import Login from './Pages/Login';
-
+import { Navigate } from 'react-router-dom';
+import Footer from './Components/Footer/Footer';
 
 
 function App() {
@@ -17,18 +18,15 @@ function App() {
     <div>
       <BrowserRouter>
         <Navbar/>
-        <Home path='/home'/>
         <Routes>
-          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Home />} />          
+          <Route path='/home' element={<Home />} />     
           <Route path='/shop' element={<Shop />} />
           <Route path='/about' element={<About />} />
-          <Route path='/product' element={<Product />}>
-            <Route path=':productId' element={<Product />} />
-          </Route>
+          <Route path='/product/:productId' element={<Product />} />
           <Route path='/checkout' element={<Checkout />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
-
         </Routes>
       </BrowserRouter>
 
