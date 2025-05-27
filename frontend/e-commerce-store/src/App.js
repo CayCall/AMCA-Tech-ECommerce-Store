@@ -11,12 +11,13 @@ import Cart from './Pages/Cart';
 import Login from './Pages/Login';
 import { Navigate } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
+import { HashRouter as Router } from 'react-router-dom';
 
 
 function App() {
   return (
     <div>
-      <BrowserRouter>
+      <Router>
         <Navbar/>
         <Routes>
           <Route path='/' element={<Home />} />          
@@ -28,7 +29,7 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
         </Routes>
-      </BrowserRouter>
+      </Router>
 
 
     </div>
