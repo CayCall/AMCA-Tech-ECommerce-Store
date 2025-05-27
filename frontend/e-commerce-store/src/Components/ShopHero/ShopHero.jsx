@@ -4,7 +4,7 @@ import shopHeroImage from '../Assets/ShopHeroImage.png'
 
 const ShopHero = () => {
     return (
-        <div>
+        <div className='shop-hero'>
             <div className='hero'>
                 <div className='hero-left'>
                     <h2>
