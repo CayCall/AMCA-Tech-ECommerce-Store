@@ -1,6 +1,6 @@
 .offers {
   position: relative;
-  height: 30vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -32,13 +32,14 @@
 }
 
 .offers-h1-first {
-  font-size: 30px;
-  margin: 0;
+  font-size: 38px;
+  margin: 20px;
+  font-weight: 400;
 }
 
 .offers-h1-second {
-  font-size: 38px;
-  margin-bottom: 30px;
+  font-size: 48px;
+  margin-bottom: 50px;
 }
 
 @media (max-width: 768px) {

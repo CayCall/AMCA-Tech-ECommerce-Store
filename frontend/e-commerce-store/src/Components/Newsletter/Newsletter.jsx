@@ -4,27 +4,7 @@ import './Newsletter.css'
 const Newsletter = () => {
     const [SuccessMessage, ShowMessage] = useState(false);
     const [EmailAddress, CheckEmail] = useState("");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
     return (
         <div className='newsletter'>
 

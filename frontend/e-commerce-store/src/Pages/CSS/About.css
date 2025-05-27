@@ -1,0 +1,130 @@
+.about {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.about h1 {
+    animation: h1Anim 2s ease-in forwards;
+    font-size: 36px;
+}
+
+@keyframes h1Anim {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.50;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.video-secton {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.video-container {
+    border-radius: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
+    width: 80%;
+}
+
+.info-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 150px;
+    letter-spacing: 0.6px;
+    word-spacing: 1px;
+}
+
+.info-about p {
+    margin: 50px 250px;
+    font-size: 23px;
+    line-height: 35px;
+}
+.contact-info-h1{
+    margin-right: 50px;
+}
+.contact-information {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 50px;
+}
+
+.info-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+    max-width: 250px;
+}
+
+
+.info-icons img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.info-icons p {
+  font-weight: 500;
+  font-size: 18px;
+  margin: 0;
+}
+
+.about > .footer {
+  flex: none;  
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+    .about{
+        padding-top: 110px;
+    }
+    .about h1{
+        font-size: 32px;
+    }
+   
+    .contact-info-h1{
+        margin: 0;
+    }
+    .contact-information {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info-icons {
+        justify-content: center;
+        text-align: center;
+    }
+    .info-about{
+      margin: 0px;
+    }
+    .info-about h1 {
+        margin-top: 50px;
+        text-align: center;
+    }
+    .info-about p {
+        margin: 30px;
+        font-size: 17px;
+        line-height: 28px;
+    }
+
+    .video-container {
+        width: 90%;
+    }
+}
