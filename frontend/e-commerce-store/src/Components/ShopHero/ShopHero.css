@@ -1,9 +1,5 @@
-.shop-hero{
-    padding-top: 90px;
-}
-
-.hero-left h2{
-    font-size: 40px;
+.hero-left h2 {
+    font-size: 60px;
 }
 
 .fade-border-container {
@@ -13,9 +9,9 @@
     overflow: hidden;
     background-color: rgb(14, 14, 14);
 }
-.fade-border-container img{
-    margin-left: 50px;
-}
+
+
+
 .fade-border-container::before {
     content: "";
     position: absolute;
@@ -38,3 +34,17 @@
 }
 
 
+@media (max-width: 768px) {
+    .shop-hero{
+        padding-top: 90px;
+    }
+    
+    .fade-border-container img {
+        margin-left: 50px;
+    }
+
+    .hero-left h2 {
+        font-size: 48px;
+    }
+
+}
