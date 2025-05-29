@@ -11,7 +11,7 @@ const Hero = () => {
                     Explore the latest tech
                 </h3>
                 <h2>
-                    Tech For The Future, Tech For Today.
+                    Tech For The Future, Tech <br/>For Today.
                 </h2>
                 <Link to='/shop'>
                     <button className='btn-variation-1'>
