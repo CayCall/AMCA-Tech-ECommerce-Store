@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home';
 import Shop from './Pages/Shop';
-import About from './Pages/About'
+import About from './Pages/About';
 import Checkout from './Pages/Checkout';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
 import Login from './Pages/Login';
-import { Navigate } from 'react-router-dom';
 import Footer from './Components/Footer/Footer';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 
+import ShopProvider from './Context/ShopContext';
 
 function App() {
   return (
-    <div>
+    <ShopProvider>
       <Router>
-        <Navbar/>
+        <Navbar />
         <Routes>
-          <Route path='/home' element={<Home />} />            
+          <Route path='/' element={<Navigate to='/home' />} />
+          <Route path='/home' element={<Home />} />
           <Route path='/shop' element={<Shop />} />
           <Route path='/about' element={<About />} />
           <Route path='/product/:productId' element={<Product />} />
@@ -27,10 +27,9 @@ function App() {
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
         </Routes>
+        <Footer />
       </Router>
-
-
-    </div>
+    </ShopProvider>
   );
 }
 
