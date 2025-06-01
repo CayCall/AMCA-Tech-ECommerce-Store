@@ -13,8 +13,11 @@ const ShopCategory = () => {
         <p>
           <span>Showing 1–12</span> out of {all_product.length} products
         </p>
+
         <div className="shopcategory-sort">
-          Sort by <img src={dropdown_icon} alt="dropdown" />
+          <button>
+            Sort by <img src={dropdown_icon} alt="Sort dropdown icon" />
+          </button >
         </div>
       </div>
 
@@ -24,6 +27,9 @@ const ShopCategory = () => {
             key={item.id}
             id={item.id}
             name={item.name}
+            brand={item.brand}
+            category={item.category}
+            description={item.description}
             image={item.image}
             new_price={item.new_price}
             old_price={item.old_price}

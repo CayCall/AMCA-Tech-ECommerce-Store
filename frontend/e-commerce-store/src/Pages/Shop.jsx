@@ -9,9 +9,6 @@ const Shop = () => {
       <ShopHero />
       <ShopCategory />
     </div>
-
-
-
   )
 }
 
