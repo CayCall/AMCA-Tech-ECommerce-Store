@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Item = ({ id, name, brand, description,category, image, new_price, old_price }) => {
   return (
     <Link to={`/product/${name}`} className="item">
-      <img src={image} alt={name} />
+      <img src={image} alt={name} onClick={window.scrollTo(0,0)} />
       <h3>{name}</h3>
       {/*I will not render these*/}
       <p style={{ display: 'none' }}>{brand}</p>
