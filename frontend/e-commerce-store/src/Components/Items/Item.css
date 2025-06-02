@@ -33,6 +33,7 @@
     font-size: 1.1rem;
     min-height: 48px;
     margin-bottom: 12px;
+    font-weight: 400;
 }
 
 .item p {
@@ -50,14 +51,14 @@
 .item-price-new {
     color: rgb(14, 14, 14);
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 
 .item-price-old {
     color: rgb(255, 0, 0);
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 400;
     text-decoration: line-through;
 }
 

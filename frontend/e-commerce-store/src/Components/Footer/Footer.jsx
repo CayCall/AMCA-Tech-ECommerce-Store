@@ -29,7 +29,7 @@ const Footer = () => {
             <div className="footer-copyright">
                 <hr />
                 <p>
-                    Copyright &copy; 2025 <a href="https://yourcompany.com" style={{ color: 'inherit', textDecoration: 'none' }}>AMCA | </a>
+                    Copyright &copy; 2025 <Link to='/home' style={{ color: 'inherit', textDecoration: 'none' }}>AMCA | </Link>
                       <span> All rights reserved.</span>
                 </p>
           
