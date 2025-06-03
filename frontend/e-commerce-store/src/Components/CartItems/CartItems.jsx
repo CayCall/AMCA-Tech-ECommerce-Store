@@ -67,8 +67,9 @@ const CartItems = () => {
             <Link to='./checkout' className='checkout-btn'>
               <button>Proceed To Checkout</button>
             </Link>
-          </div>
 
+          </div>
+          <Link to='/shop'> <p className='continue-shopping'>Continue shopping</p></Link>
         </div>
       </div>
 

@@ -5,7 +5,7 @@ const Checkout = () => {
   console.log('Checkout page rendered');
   return (
     <div>
-      <OrderCheckout />
+      <OrderCheckout/>
     </div>
   )
 }

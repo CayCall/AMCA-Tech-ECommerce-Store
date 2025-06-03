@@ -1,0 +1,40 @@
+.checkout-container {
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.checkout-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 50px;
+  margin-top: 30px;
+}
+
+.checkout-wrapper-left,
+.checkout-wrapper-middle,
+.checkout-wrapper-right {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.order-total {
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+

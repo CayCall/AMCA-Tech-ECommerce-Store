@@ -50,8 +50,8 @@
     flex: 1;
     display: flex;
     flex-direction: column;
-    margin-right: 200px;
-    gap: 40px;
+    margin-right: 1100px;
+    gap: 20px;
 }
 
 .cartitems-total-item {
@@ -115,4 +115,13 @@ p a{
 }
 .hidden {
   display: none;
+}
+.continue-shopping{
+    color: #007AFF;
+    list-style: none;
+    text-decoration: none; 
+    margin: 0px;
+}
+a{
+    text-decoration: none;
 }
