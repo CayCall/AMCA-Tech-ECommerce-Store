@@ -33,8 +33,8 @@ const SignUp = () => {
       ...formData,
       [name]: value,
     });
-    console.log(name);
-    console.log(value);
+
+
   }
 
   //check if the users inputs are valid
@@ -63,25 +63,14 @@ const SignUp = () => {
       hideErrorAfterDelay();
       return;
     }
-    if (!checkbox) {
-      setHasError(true);
-      setErrorText('You must agree to the terms and privacy policy.');
-      hideErrorAfterDelay();
-      return;
-    }
 
-    setHasError(false);
-    setErrorText('');
 
-    //solution for local storage first
-    //i will do google ouauth later - still deciding tbh
+    localStorage.setItem('registeredUser', JSON.stringify(formData));
 
     localStorage.setItem('user', JSON.stringify(formData));
     setUser(formData);
     setFormSubmit(true);
-    toast.success(` You have successfully signed up!`);
-    console.log('Data has been submitted!');
-
+    toast.success(`Account created successfully, ${formData.username}!`);
   };
 
   //ERROR HANDLING

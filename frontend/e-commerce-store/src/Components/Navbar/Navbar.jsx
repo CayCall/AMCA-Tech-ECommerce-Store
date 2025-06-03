@@ -23,7 +23,7 @@ const Navbar = () => {
 
   //logoutlocal 
   const handleLogout = () => {
-    localStorage.removeItem('user');
+    localStorage.setItem(0, 'user'); 
     setUser(null);
   };
 
