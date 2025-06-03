@@ -1,35 +1,50 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react';
 import './Newsletter.css'
 
 const Newsletter = () => {
-    const [SuccessMessage, ShowMessage] = useState(false);
-    const [EmailAddress, CheckEmail] = useState("");
-    
-    return (
-        <div className='newsletter'>
+  const [email, setEmail] = useState('');
+  const [successMessage, setSuccessMessage] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
-            <h1>Sign Up For Exclusive Deals & News</h1>
-            <p>Subscribe to our newsletter</p>
-            <div>
-                <input type="text" placeholder='Email Address' onChange={(e) => CheckEmail(e.target.value)}>
+  const validateEmail = (email) => {
+    // Basic email regex validation
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(email);
+  };
 
-                </input>
-                <button className='btn-variation-1' >Subscribe</button>
+  const displaySuccess = () => {
+    if (!validateEmail(email)) {
+      setErrorMessage('Please enter a valid email address.');
+      setSuccessMessage(false);
+      return;
+    }
 
-            </div>
-            {
-                SuccessMessage && <p className='success message'>Thank you for Subscribing to our newsletter.</p>
-            }
-        </div>
-    )
-}
+    setSuccessMessage(true);
+    setErrorMessage('');
+    setEmail(''); // clear input if you want
 
-export default Newsletter
+    setTimeout(() => {
+      setSuccessMessage(false);
+    }, 3000);
+  };
 
- 
+  return (
+    <div className='newsletter'>
+      <h1>Sign Up For Exclusive Deals & News</h1>
+      <p>Subscribe to our newsletter</p>
+      <div>
+        <input
+          type="text"
+          placeholder='Email Address'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <button className='btn-variation-1' onClick={displaySuccess}>Subscribe</button>
+      </div>
+      {successMessage && <p className='success-message'>Thank you for Subscribing to our newsletter.</p>}
+      {errorMessage && <p className='error-message'>{errorMessage}</p>}
+    </div>
+  );
+};
 
-
-
-
-
-
+export default Newsletter;
