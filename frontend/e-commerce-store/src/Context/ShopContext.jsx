@@ -52,25 +52,13 @@ const ShopProvider = ({ children }) => {
   }
 
   const sortItemsby = (sortDirection = "asc") => {
-  const sortedItems = [...all_product].sort((a, b) => {
-    return sortDirection === "asc"
-      ? a.new_price - b.new_price
-      : b.new_price - a.new_price;
-  });
-  return sortedItems;
-};
-  
-  
-  
-
-  
-  
-  
-  
-  
-
-  
-  
+    const sortedItems = [...all_product].sort((a, b) => {
+      return sortDirection === "asc"
+        ? a.new_price - b.new_price
+        : b.new_price - a.new_price;
+    });
+    return sortedItems;
+  };
 
   const contextValue = { sortItemsby, getTotalCartItems, getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart };
 

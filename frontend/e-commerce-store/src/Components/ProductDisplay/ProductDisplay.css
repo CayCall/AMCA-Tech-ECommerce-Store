@@ -44,6 +44,31 @@
     font-size: 18px;
 }
 
+.custom-toast-container {
+    font-size: 16px;
+}
+
+.custom-toast .Toastify__progress-bar {
+    background: #000000 !important;
+}
+
+.custom-toast .Toastify__progress-bar--background {
+    background: #e0e0e0 !important;
+}
+
+.custom-toast .Toastify__icon svg {
+    fill: #FF5733 !important;
+    stroke: #FF5733 !important;
+}
+
+.custom-toast {
+    color: rgb(150, 150, 150) !important;
+    border-radius: 10px !important;
+    padding: 16px !important;
+    font-weight: 500;
+}
+
+
 .add-btn {
     width: 150px;
     height: 55px;
@@ -66,6 +91,7 @@
     color: #007AFF;
     transform: translateY(-3px);
 }
+
 .productdisplay-right-category span {
     font-weight: 700;
     color: #3d3d3d;

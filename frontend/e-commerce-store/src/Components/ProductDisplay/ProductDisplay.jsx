@@ -1,10 +1,12 @@
 import React, { useContext } from 'react'
 import './ProductDisplay.css'
 import { ShopContext } from '../../Context/ShopContext';
+import { toast } from 'react-toastify';
+
 
 const ProductDisplay = (props) => {
     const { product } = props;
-    const {addToCart} = useContext(ShopContext);
+    const { addToCart } = useContext(ShopContext);
 
     return (
         <div className='productdisplay'>
@@ -20,7 +22,14 @@ const ProductDisplay = (props) => {
                 <div className="productdisplay-right-prices-old">R {product.old_price}</div>
                 <div className="productdisplay-right-prices-new">R {product.new_price}</div>
             </div>
-            <button className='add-btn' onClick={()=>{addToCart(product.id)}}>Add To Cart</button>
+
+            <button
+                className='add-btn'
+                onClick={() => {
+                    addToCart(product.id);
+                    toast.success(` ${product.name} added to cart!`);
+                }}
+            >Add To Cart</button>
 
             <div className="description-box">
                 <h3>Description</h3>
@@ -35,10 +44,6 @@ const ProductDisplay = (props) => {
                         <span>Brand:</span> {product.brand}
                     </p>
                 </div>
-
-
-
-
             </div>
         </div>
     )
