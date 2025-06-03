@@ -50,7 +50,29 @@ const ShopProvider = ({ children }) => {
     }
     return totalItem;
   }
-  const contextValue = { getTotalCartItems, getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart };
+
+  const sortItemsby = (sortDirection = "asc") => {
+  const sortedItems = [...all_product].sort((a, b) => {
+    return sortDirection === "asc"
+      ? a.new_price - b.new_price
+      : b.new_price - a.new_price;
+  });
+  return sortedItems;
+};
+  
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  const contextValue = { sortItemsby, getTotalCartItems, getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart };
 
   return (
     <ShopContext.Provider value={contextValue}>

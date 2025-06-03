@@ -5,13 +5,19 @@ import { Link } from 'react-router-dom';
 const Breadcrum = (props) => {
   const { product } = props;
   return (
-    <div className='breadcrum'>
-
-      <Link to="/home">HOME</Link>
-      <img className="breadcrum-arrow" src={arrow_icon} alt="" />
-      <Link to="/shop">SHOP</Link>
-      <img src={arrow_icon} alt="" />{product.name}
-    </div>
+    <nav aria-label="Breadcrumb">
+      <div className='breadcrum'>
+        <ol>
+          <li><Link to="/home">Home</Link></li>
+          <li aria-hidden="true">
+            <img className="breadcrum-arrow" src={arrow_icon} alt="A bread crumb arrow facing right for navigation." />
+          </li>
+          <li><Link to="/shop">Shop</Link></li>
+          <img src={arrow_icon} alt="A second bread crumb arrow facing right for navigation." />
+          <li aria-current="page">{product.name}</li>
+        </ol>
+      </div>
+    </nav>
   )
 }
 

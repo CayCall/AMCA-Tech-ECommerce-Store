@@ -80,7 +80,7 @@ let all_product = [
   {
     id: 5,
     name: "iPhone 14 - 128GB",
-    ategory: "Phones",
+    category: "Phones",
     image: p5_img,
     new_price: 18999.99,
     old_price: 22999.99,
