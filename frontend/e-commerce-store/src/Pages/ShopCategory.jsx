@@ -4,11 +4,10 @@ import { ShopContext } from '../Context/ShopContext';
 import Item from '../Components/Items/Items'; // create this component
 import dropdown_icon from '../Components/Assets/dropdown_icon.png';
 
-const ShopCategory = () => {
+const  ShopCategory = () => {
 
   const { all_product } = useContext(ShopContext);
   const [displayedProducts, setDisplayedProducts] = useState([]);
-  const [showSortOptions, setShowSortOptions] = useState(false);
   const [loading, setLoading] = useState(false);
 
 

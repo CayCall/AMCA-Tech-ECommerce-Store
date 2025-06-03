@@ -6,42 +6,47 @@ import About from './Pages/About';
 import Checkout from './Pages/Checkout';
 import ProductPage from './Pages/ProductPage';
 import Cart from './Pages/Cart';
+import SignUp from './Pages/SignUp';
 import Login from './Pages/Login';
 import Footer from './Components/Footer/Footer';
 import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ShopProvider from './Context/ShopContext';
+import AuthProvider from './Context/AuthContext';
 
 function App() {
   return (
-    <ShopProvider>
-      <Router>
-        <ToastContainer
-          position="top-right"
-          autoClose={4000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          className="custom-toast-container"
-          toastClassName="custom-toast"
-        />
-        <Navbar />
-        <Routes>
-          <Route path='/' element={<Navigate to='/home' />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/shop' element={<Shop />} />
-          <Route path='/about' element={<About />} />
-          <Route path='/product/:productName' element={<ProductPage />} />
+    <AuthProvider>
+      <ShopProvider>
+        <Router>
+          <ToastContainer
+            position="top-right"
+            autoClose={4000}
+            hideProgressBar={false}
+            newestOnTop={false}
+            closeOnClick
+            rtl={false}
+            className="custom-toast-container"
+            toastClassName="custom-toast"
+          />
+          <Navbar />
+          <Routes>
+            <Route path='/' element={<Navigate to='/home' />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/shop' element={<Shop />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/product/:productName' element={<ProductPage />} />
 
-          <Route path='/cart/checkout' element={<Checkout />} />
-          <Route path='/cart' element={<Cart />} />
-          <Route path='/login' element={<Login />} />
-        </Routes>
-        <Footer />
-      </Router>
-    </ShopProvider>
+            <Route path='/cart/checkout' element={<Checkout />} />
+            <Route path='/cart' element={<Cart />} />
+            <Route path='/signup' element={<SignUp />} />
+            <Route path='/login' element={<Login />} />
+          </Routes>
+          <Footer />
+        </Router>
+      </ShopProvider>
+    </AuthProvider>
   );
 }
 

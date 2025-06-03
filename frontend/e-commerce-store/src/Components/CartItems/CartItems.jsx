@@ -3,9 +3,12 @@ import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../Context/AuthContext';
 
 const CartItems = () => {
   const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
+  const { user, setUser } = useContext(AuthContext);
+
   return (
     <div className='cartitems'>
       <div className="cart-items-format-main">
@@ -54,7 +57,17 @@ const CartItems = () => {
               <h3>R{getTotalCartAmount().toFixed(2)}</h3>
             </div>
           </div>
-          <Link to='./checkout' className='checkout-btn'><button>Proceed To Checkout</button></Link>
+
+          <div className={`auth-false ${user ? 'hidden' : ''}`}>
+            <button className='checkout-btn' disabled>Proceed To Checkout</button>
+            <p>Please <Link to="/signup">Log In</Link> To Continue.</p>
+          </div>
+
+          <div className={`auth-true ${!user ? 'hidden' : ''}`}>
+            <Link to='./checkout' className='checkout-btn'>
+              <button>Proceed To Checkout</button>
+            </Link>
+          </div>
 
         </div>
       </div>
