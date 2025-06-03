@@ -2,9 +2,10 @@ import React, { useContext } from 'react'
 import './CartItems.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
+import { Link } from 'react-router-dom';
 
 const CartItems = () => {
-  const { getTotalCartAmount ,all_product, cartItems, removeFromCart } = useContext(ShopContext);
+  const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
   return (
     <div className='cartitems'>
       <div className="cart-items-format-main">
@@ -24,7 +25,7 @@ const CartItems = () => {
               <p>{e.name}</p>
               <p>R {e.new_price}</p>
               <button className='cart-items-quantity'>{cartItems[e.id]}</button>
-              <p>R {Math.round(e.new_price )* cartItems[e.id]}</p>
+              <p>R {Math.round(e.new_price) * cartItems[e.id]}</p>
               <img className='cart-items-remove-icon ' src={remove_icon} onClick={() => { removeFromCart(e.id) }} alt=''></img>
             </div>
             <hr />
@@ -33,7 +34,7 @@ const CartItems = () => {
         return null;
       })}
 
-      
+
       <div className="cartitems-down">
         <div className="cartitems-total">
           <h1>Total</h1>
@@ -53,7 +54,8 @@ const CartItems = () => {
               <h3>R{getTotalCartAmount().toFixed(2)}</h3>
             </div>
           </div>
-          <button>Proceed To Checkout</button>
+          <Link to='./checkout' className='checkout-btn'><button>Proceed To Checkout</button></Link>
+
         </div>
       </div>
 

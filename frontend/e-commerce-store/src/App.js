@@ -35,7 +35,7 @@ function App() {
           <Route path='/about' element={<About />} />
           <Route path='/product/:productName' element={<ProductPage />} />
 
-          <Route path='/checkout' element={<Checkout />} />
+          <Route path='/cart/checkout' element={<Checkout />} />
           <Route path='/cart' element={<Cart />} />
           <Route path='/login' element={<Login />} />
         </Routes>

@@ -1,8 +1,12 @@
 import React from 'react'
+import OrderCheckout from '../Components/OrderCheckout/OrderCheckout'
 
 const Checkout = () => {
+  console.log('Checkout page rendered');
   return (
-    <div>This is what the About Page shows</div>
+    <div>
+      <OrderCheckout />
+    </div>
   )
 }
 

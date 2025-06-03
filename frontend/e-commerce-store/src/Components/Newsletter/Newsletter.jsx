@@ -7,7 +7,7 @@ const Newsletter = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   const validateEmail = (email) => {
-    // Basic email regex validation
+
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
   };
@@ -21,7 +21,7 @@ const Newsletter = () => {
 
     setSuccessMessage(true);
     setErrorMessage('');
-    setEmail(''); // clear input if you want
+    setEmail('');
 
     setTimeout(() => {
       setSuccessMessage(false);
@@ -41,6 +41,7 @@ const Newsletter = () => {
         />
         <button className='btn-variation-1' onClick={displaySuccess}>Subscribe</button>
       </div>
+      {/*don't forget to come back to this and make the success condition work*/ }
       {successMessage && <p className='success-message'>Thank you for Subscribing to our newsletter.</p>}
       {errorMessage && <p className='error-message'>{errorMessage}</p>}
     </div>
