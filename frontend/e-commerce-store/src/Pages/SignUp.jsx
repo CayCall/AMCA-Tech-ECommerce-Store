@@ -19,12 +19,13 @@ const SignUp = () => {
 
 
   //handling current input 
-  const [checkbox, setCheckBox] = useState(false);
+  const [checkbox, setCheckBox] = useState(true);
   const handleCheckBox = (e) => {
-    setCheckBox(e.target.checked)
+    setCheckBox(e.target.checked);
+    console.log(checkbox + "has been checked");
   }
 
-
+  // handle users name change based on the event that a user types it updates these strings simultaneously
   const handleChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
@@ -47,28 +48,39 @@ const SignUp = () => {
 
   //when the user submits their data the from must handle it with this function below
   const [formSubmit, setFormSubmit] = useState(false);
+
   const handleSubmitData = (e) => {
     e.preventDefault();
-
+    // when form username , email and password are empty we display fill all fields in 
     if (!formData.username || !formData.email || !formData.password) {
       setHasError(true);
-      setErrorText('Please fill all fields.');
+      setErrorText('Please fill in all fields.');
       hideErrorAfterDelay();
       return;
     }
-
+    //validatee the users email
     if (!validateFormData(formData)) {
       setHasError(true);
       setErrorText('Invalid email format.');
       hideErrorAfterDelay();
       return;
     }
+    //make sure the checkbox is checked
+    if (!checkbox) {
+      setHasError(true);
+      setErrorText('You must accept the Privacy Policy to continue.');
+      hideErrorAfterDelay();
+      return;
+    }
 
-
+    //once  the users actual details are receieved we set that user to a registredUser object because they have signed up
     localStorage.setItem('registeredUser', JSON.stringify(formData));
-
+    //used for local storing to compare user === registered user
     localStorage.setItem('user', JSON.stringify(formData));
+
+    //set form data
     setUser(formData);
+    //form has finalled been submitted after all the checks above
     setFormSubmit(true);
     toast.success(`Account created successfully, ${formData.username}!`);
   };
@@ -77,6 +89,8 @@ const SignUp = () => {
   const [hasError, setHasError] = useState(false);
   const [errorText, setErrorText] = useState('');
 
+
+  //timed error 
   const hideErrorAfterDelay = () => {
     setTimeout(() => {
       setHasError(false);

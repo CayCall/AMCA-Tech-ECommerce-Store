@@ -58,6 +58,7 @@
     display: flex;
     justify-content: space-between;
     padding: 15px 0px;
+    font-size: 19px;
 }
 
 .checkout-btn {
@@ -120,8 +121,11 @@ p a{
     color: #007AFF;
     list-style: none;
     text-decoration: none; 
-    margin: 0px;
+    margin: 0px 5px;
+    font-size: 17px;
+    letter-spacing: 0.5px;
 }
+
 a{
     text-decoration: none;
 }
