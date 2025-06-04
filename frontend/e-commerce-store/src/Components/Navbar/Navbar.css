@@ -206,8 +206,12 @@
         position: fixed;
         background-color: white;
         z-index: 1000;
+        top: 0;
     }
 
+    .user-info {
+        display: none;
+    }
 
     .nav-login-cart button {
         display: none;
@@ -267,7 +271,7 @@
         font-size: 18px;
         width: 150px;
         margin-top: 10px;
-        
+
     }
 
     .mobile-login-button {

@@ -9,6 +9,7 @@ const CartItems = () => {
   const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext);
   const { user, setUser } = useContext(AuthContext);
 
+  const hasItemsInCart = Object.values(cartItems).some(qty => qty > 0);
   return (
     <div className='cartitems'>
       <div className="cart-items-format-main">
@@ -58,18 +59,35 @@ const CartItems = () => {
             </div>
           </div>
 
-          <div className={`auth-false ${user ? 'hidden' : ''}`}>
-            <button className='checkout-btn' disabled>Proceed To Checkout</button>
-            <p>Please <Link to="/signup">Log In</Link> To Continue.</p>
-          </div>
+          {/* code below conditionally renders proceed to checkout 
+            i have made sure that the user is required to satisfy numerous conditions before proceeding
+            1.user not logged in => "please log in to continue"
+            2.user logged in but cart is emppty =>"your cart is empty"
+            3.user logged in and cart has items => activates button
+          
+          */}
+          {!user ? (
 
-          <div className={`auth-true ${!user ? 'hidden' : ''}`}>
-            <Link to='./checkout' className='checkout-btn'>
-              <button>Proceed To Checkout</button>
-            </Link>
-           
-          </div>
- <Link to='/shop'> <p className='continue-shopping'>Continue shopping</p></Link>
+            <div className="auth-false">
+              <button className='checkout-btn' disabled>Proceed To Checkout</button>
+              <p>Please <Link to="/signup">Log In</Link> To Continue.</p>
+            </div>
+          ) : !hasItemsInCart ? (
+
+            <div className="auth-false">
+              <button className='checkout-btn' disabled>Proceed To Checkout</button>
+              <p>Your cart is empty.</p>
+            </div>
+          ) : (
+
+            <div className="auth-true">
+              <Link to="./checkout" className="checkout-btn">
+                <button>Proceed To Checkout</button>
+              </Link>
+            </div>
+          )}
+
+          <Link to='/shop'> <p className='continue-shopping'>Continue shopping</p></Link>
         </div>
       </div>
 

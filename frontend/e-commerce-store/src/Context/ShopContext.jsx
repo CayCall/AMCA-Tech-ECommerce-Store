@@ -59,8 +59,15 @@ const ShopProvider = ({ children }) => {
     });
     return sortedItems;
   };
+  const clearCart = () => {
+    const emptyCart = {};
+    all_product.array.forEach(product => {
+      emptyCart[product.id] = 0;
+    });
 
-  const contextValue = { sortItemsby, getTotalCartItems, getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart };
+    setCartItems(emptyCart);
+  }
+  const contextValue = { clearCart ,sortItemsby, getTotalCartItems, getTotalCartAmount, all_product, cartItems, addToCart, removeFromCart };
 
   return (
     <ShopContext.Provider value={contextValue}>
