@@ -19,7 +19,7 @@ const Footer = () => {
 
             <div className="footer-social-icon" aria-label="Social media links">
                 <div className="footer-icons-container" target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram (placeholder)">
-                    <img src={instagram_icon} alt="Instagram Logo" />target="_blank" rel="noopener noreferrer" aria-label="Visit Instagram (placeholder)"
+                    <img src={instagram_icon} alt="Instagram Logo" />
                 </div>
                 <div className="footer-icons-container" target="_blank" rel="noopener noreferrer" aria-label="Visit WhatsApp (placeholder)">
                     <img src={Whatsapp_icon} alt="Whatsapp Logo" />
