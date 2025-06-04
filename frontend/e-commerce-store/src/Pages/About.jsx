@@ -30,9 +30,9 @@ const About = () => {
         </p>
       </div>
 
-
+      <h1 className='contact-info-h1'>Get In Touch</h1>
       <div className='contact-information'>
-        <h1 className='contact-info-h1'>Get In Touch</h1>
+
         <div className='info-icons'>
           <img src={emailIcon} />
           <p>Phone: +1 234-567-890</p>
