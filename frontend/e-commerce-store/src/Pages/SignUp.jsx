@@ -101,9 +101,9 @@ const SignUp = () => {
 
 
   return (
-    <form onSubmit={handleSubmitData} className='loginsignup'>
+    <form onSubmit={handleSubmitData} className='loginsignup' role="form" aria-labelledby="signup-title">
       <div className="loginsignup-container">
-        <h1>Sign Up</h1>
+        <h1 id="signup-title">Sign Up</h1>
 
         <div className="loginsignup-fields">
           <input
@@ -112,6 +112,8 @@ const SignUp = () => {
             value={formData.username}
             placeholder='Username'
             onChange={handleChange}
+            aria-label="Username"
+            required
           />
 
           <input
@@ -120,6 +122,8 @@ const SignUp = () => {
             value={formData.email}
             placeholder='Email Address'
             onChange={handleChange}
+            aria-label="Password"
+            required
           />
           <input
             type="password"
@@ -131,17 +135,22 @@ const SignUp = () => {
 
         </div>
 
-        <button type="submit">Sign Up</button>
+        <button type="submit" aria-label="Sign Up">Sign Up</button>
 
 
         {hasError && (
-          <div className="error-sign-up" style={{ color: 'red' }}>
+          <div
+            className="error-sign-up"
+            style={{ color: 'red' }}
+            role="alert"
+            aria-live="assertive"
+          >
             {errorText}
           </div>
         )}
 
 
-        <p className='loginsignup-login'>
+        <p className='loginsignup-login' aria-label="Go to login page">
           Already have an account? <Link to='/login'><span>Login here</span></Link>
         </p>
 
@@ -150,11 +159,12 @@ const SignUp = () => {
             type='checkbox'
             checked={checkbox}
             onChange={handleCheckBox}
+            aria-label="Agree to the terms of use and privacy policy"
           />
           <p>By continuing, I agree to the terms of use & privacy policy.</p>
         </div>
 
-        <p className='form-footer'>
+        <p className='form-footer' aria-hidden="true">
           Copyright &copy; 2025 | All rights reserved.
         </p>
       </div>

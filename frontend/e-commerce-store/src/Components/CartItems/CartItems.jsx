@@ -97,8 +97,8 @@ const CartItems = () => {
           ) : (
 
             <div className="auth-true">
-              <Link to="./checkout" className="checkout-btn" aria-label='Proceed to secure checkout'>
-                <button>Proceed To Checkout</button>
+              <Link to="/checkout" className="checkout-btn" aria-label="Proceed to Checkout">
+                Proceed To Checkout
               </Link>
             </div>
           )}

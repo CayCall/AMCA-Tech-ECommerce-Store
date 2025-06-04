@@ -184,11 +184,13 @@
 
 /* Hamburger base styles */
 .hamburger {
+    all: unset;
     display: none;
     font-size: 28px;
     cursor: pointer;
     z-index: 1001;
     padding: 10px;
+
 }
 
 .hamburger-login-btn {

@@ -73,6 +73,11 @@
 }
 
 .checkout-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; 
+    text-decoration: none; 
+    text-align: center;
     width: 262px;
     height: 58px;
     outline: none;
@@ -213,7 +218,7 @@ a {
     .cartitems-total {
         margin: 0px;
     }
-
+    
     .cartitems-total-item {
         margin: 0;
         gap: 150px;
@@ -269,7 +274,9 @@ a {
         margin: 0;
         padding: 0;
     }
-
+    
+    
+    
     .auth-false p {
         font-size: 16px;
         text-align: center;

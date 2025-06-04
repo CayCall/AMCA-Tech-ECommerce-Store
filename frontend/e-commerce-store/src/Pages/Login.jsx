@@ -111,7 +111,7 @@ const Login = () => {
         )}
 
         <p className='form-footer'>
-          Copyright &copy; 2025 | All rights reserved.
+           &copy;AMCA 2025 | All rights reserved.
         </p>
       </div>
     </form>
