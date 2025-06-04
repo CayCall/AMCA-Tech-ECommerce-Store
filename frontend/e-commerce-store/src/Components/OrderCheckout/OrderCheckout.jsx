@@ -77,9 +77,10 @@ const OrderCheckout = () => {
 
     return (
         <div className='checkout-section'>
+            <h1>Secure Checkout</h1>
             <form className="checkout-form" onSubmit={handleSubmit}>
                 <div className="checkout-wrapper">
-                    <h1>Secure Checkout</h1>
+
                     <div className="checkout-wrapper-left">
                         <h3>1. Order Summary</h3>
                         <table>
@@ -99,23 +100,10 @@ const OrderCheckout = () => {
 
                                         return (
                                             <tr key={product.id}>
-                                                <td colSpan="4">
-                                                    <div className="checkout-item-line">
-                                                        <span className="checkout-item-label">Product:</span>
-                                                        <span>{product.name}</span>
-                                                    </div>
-                                                    <div className="checkout-item-line">
-                                                        <span className="checkout-item-label">Price:</span>
-                                                        <span>R {product.new_price}</span>
-                                                    </div>
-                                                    <div className="checkout-item-line">
-                                                        <span className="checkout-item-label">Quantity:</span>
-                                                        <span>{quantity}</span>
-                                                    </div>
-                                                    <div className="checkout-item-line">
-                                                        <span className="checkout-item-label">Total:</span>
-                                                        <span>R {totalPrice}</span>
-                                                    </div>
+                                                <td>Product Name: {product.name}</td>
+                                                <td>Quantity: {quantity}</td>
+                                                <td>Amount: R {product.new_price}</td>
+                                                <td>
                                                     <button onClick={() => removeFromCart(product.id)}>Remove</button>
                                                 </td>
                                             </tr>

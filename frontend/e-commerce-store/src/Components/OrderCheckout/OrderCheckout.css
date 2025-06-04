@@ -190,18 +190,20 @@ h3 {
 }
 
 @media (max-width: 480px) {
+  .checkout-section{
+    margin-top:40px;
+  }
   .checkout-wrapper {
     flex-direction: column;
     margin: 10px;
   }
 
   .checkout-wrapper-left {
-    width: 100%;
+    width: 90%;
     margin: 0;
     padding: 1rem;
   }
 
-  .checkout-wrapper-left table,
   .checkout-wrapper-left thead {
     display: none;
   }

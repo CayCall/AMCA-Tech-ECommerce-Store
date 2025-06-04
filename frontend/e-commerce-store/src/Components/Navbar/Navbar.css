@@ -298,4 +298,12 @@
     .nav-login-cart img {
         width: 24px;
     }
+
+    .login-form-btn {
+        z-index: 1000;
+    }
+
+    .signup-form-btn {
+        z-index: 1000;
+    }
 }
