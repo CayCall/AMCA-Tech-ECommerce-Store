@@ -80,10 +80,10 @@
 }
 
 .shop-category-products {
-    margin: 20px 170px;
+    margin: 20px 150px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 80px;
+    row-gap: 50px;
 }
 
 
