@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/AMCA-Tech-ECommerce-Store/static/css/main.c27f021a.css",
-    "main.js": "/AMCA-Tech-ECommerce-Store/static/js/main.8ba57e96.js",
+    "main.css": "/AMCA-Tech-ECommerce-Store/static/css/main.52b6638d.css",
+    "main.js": "/AMCA-Tech-ECommerce-Store/static/js/main.755a04cc.js",
     "static/js/453.5b686285.chunk.js": "/AMCA-Tech-ECommerce-Store/static/js/453.5b686285.chunk.js",
     "static/media/Discover AMCA Ecommerce Store_free.mp4": "/AMCA-Tech-ECommerce-Store/static/media/Discover AMCA Ecommerce Store_free.31c8a58533f5e298a71e.mp4",
     "static/media/hero_image.jpg": "/AMCA-Tech-ECommerce-Store/static/media/hero_image.b660afb9dace90c2edd7.jpg",
@@ -19,12 +19,12 @@
     "static/media/product_35.png": "/AMCA-Tech-ECommerce-Store/static/media/product_35.2f465e0b7d442d627a7a.png",
     "static/media/product_33.png": "/AMCA-Tech-ECommerce-Store/static/media/product_33.7486a8fc81626a6b3d55.png",
     "index.html": "/AMCA-Tech-ECommerce-Store/index.html",
-    "main.c27f021a.css.map": "/AMCA-Tech-ECommerce-Store/static/css/main.c27f021a.css.map",
-    "main.8ba57e96.js.map": "/AMCA-Tech-ECommerce-Store/static/js/main.8ba57e96.js.map",
+    "main.52b6638d.css.map": "/AMCA-Tech-ECommerce-Store/static/css/main.52b6638d.css.map",
+    "main.755a04cc.js.map": "/AMCA-Tech-ECommerce-Store/static/js/main.755a04cc.js.map",
     "453.5b686285.chunk.js.map": "/AMCA-Tech-ECommerce-Store/static/js/453.5b686285.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c27f021a.css",
-    "static/js/main.8ba57e96.js"
+    "static/css/main.52b6638d.css",
+    "static/js/main.755a04cc.js"
   ]
 }
