@@ -83,6 +83,13 @@
 }
 
 @media (max-width: 480px) {
+    .shop-category-products {
+        grid-template-columns: 1fr;
+        margin: 20px 20px;
+        justify-items: center;
+        align-items: center;
+    }
+
     .item {
         width: 70%;
         padding: 12px;

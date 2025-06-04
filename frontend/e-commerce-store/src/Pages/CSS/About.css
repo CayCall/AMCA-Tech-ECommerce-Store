@@ -128,3 +128,20 @@
         width: 90%;
     }
 }
+@media (max-width: 480px){
+    .video-secton{
+        margin: 0px;
+    }
+    .info-about{
+        margin-top: 30px;
+    }
+    .info-about p{
+        margin: 45px;
+    }
+    .info-icons p{
+        font-size: 20px;
+    }
+    .contact-information{
+        margin: 20px;
+    }
+}

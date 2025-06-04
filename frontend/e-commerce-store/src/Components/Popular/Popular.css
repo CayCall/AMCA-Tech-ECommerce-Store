@@ -6,11 +6,6 @@
   margin-bottom: 60px;
 }
 
-
-
-
-
-
 .popular h1 {
     color: rgb(14, 14, 14);
     font-size: 50px;
@@ -31,13 +26,9 @@
     gap: 20px;
     justify-content: center;
 }
-
-
-
-
 .popular-item img {
     width: 200px;
-    height: auto;
+    height: 60%;
     object-fit: contain;
 }
 

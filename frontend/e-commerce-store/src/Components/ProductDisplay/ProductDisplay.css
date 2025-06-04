@@ -153,8 +153,12 @@
 
 @media (max-width: 480px) {
     .description-box-wrapper {
-        width: 95%;
+        width: 100%;
         padding: 10px;
-        margin: 0 auto;
+        margin: 0px ;
+    }
+
+    .productdisplay-right-description{
+        font-size: 17px;
     }
 }

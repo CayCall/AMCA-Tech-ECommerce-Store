@@ -81,4 +81,7 @@
         justify-items: center;
     }
 }
+@media (max-width: 480px) {
+
+}
 

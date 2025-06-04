@@ -80,13 +80,20 @@
 }
 
 .shop-category-products {
+    margin: 20px 200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 40px;
+}
+
+@media (min-width: 1600px) {
+  .shop-category-products {
     margin: 20px 150px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 50px;
+    row-gap: 40px; 
+  }
 }
-
-
 
 @media (max-width: 1024px) {
     .shop-category-products {
@@ -114,8 +121,10 @@
 
 @media (max-width: 768px) {
     .shop-category-products {
+        display: grid;
         grid-template-columns: repeat(2, 1fr);
         margin: 20px 40px;
+        align-items: center;
     }
 
     .item {
